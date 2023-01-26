@@ -8,14 +8,23 @@ const Nav = () => {
     //     <Route path="/booking" element={<BookingPage />}></Route>
     // </Routes>
     <nav className="nav">
-      <img src={logo} alt="logo" className="nav__logo__header" />
+      <img
+        src={logo}
+        alt="logo"
+        className="nav__logo__header"
+        data-testid="nav-logo"
+      />
 
       <ul className="nav__links">
         <li className="nav__li__links">
-          <a href="/">Home</a>
+          <a href="/" data-testid="Home">
+            Home
+          </a>
         </li>
         <li className="nav__li__links">
-          <a href="/about">About</a>
+          <a href="/about" data-testid="About">
+            About
+          </a>
         </li>
         <li className="nav__li__links">
           <a href="/menu">Menu</a>
@@ -27,7 +36,9 @@ const Nav = () => {
           <a href="./order-online">Order Online</a>
         </li>
         <li className="nav__li__links">
-          <a href="./login">Login</a>
+          <a href="./login" data-testid="Login">
+            Login
+          </a>
         </li>
       </ul>
     </nav>

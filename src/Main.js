@@ -1,30 +1,43 @@
-import { useState } from "react";
+// import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import BookingPage from "./BookingPage";
-import { useReducer } from "react";
+import { useReducer, createContext } from "react";
+import { fetchAPI, submitAPI } from "./api";
+
+export const AvalibleTimesDispatch = createContext(null);
 
 const Main = () => {
-  const availableTimesArrayInitialState = [
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ];
-  const updateTimes = () => {
-    return availableTimesArrayInitialState;
+  const navigate = useNavigate();
+
+  const initializeTimes = () => {
+    return fetchAPI(new Date());
   };
 
-  // const [times, setTimes] = useState(availableTimesArray);
-  const [times, dispatchTimes] = useReducer(
-    updateTimes,
-    availableTimesArrayInitialState
-  );
+  const updateTimesReducer = (state, newDate) => {
+    console.log("updateTimes", newDate);
+    const newTimes = fetchAPI(new Date(newDate));
+    console.log(newTimes.length);
+    return newTimes;
+  };
 
-  // const initializeTimes = () => {// }
+  const [times, setTimes] = useReducer(updateTimesReducer, initializeTimes());
+
+  const submitForm = (formData) => {
+    console.log(formData);
+    const response = submitAPI(formData);
+
+    if (response === true) {
+      console.log("Success");
+      navigate("/confirmation");
+    }
+  };
+
   return (
     <main>
-      <BookingPage availableTimes={times} />
+      <AvalibleTimesDispatch.Provider value={[times, setTimes]}>
+        <BookingPage submitForm={submitForm} />
+      </AvalibleTimesDispatch.Provider>
     </main>
   );
 };

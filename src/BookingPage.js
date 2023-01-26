@@ -1,9 +1,9 @@
-import BookingForm from "./ BookingForm";
+import BookingForm from "./BookingForm";
 
-const BookingPage = ({ availableTimes }) => {
+const BookingPage = ({ submitForm }) => {
   return (
     <>
-      <BookingForm availableTimes={availableTimes} />
+      <BookingForm submitForm={submitForm} />
     </>
   );
 };

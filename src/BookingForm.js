@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AvalibleTimesDispatch } from "./Main";
+// import ConfirmedBooking from "./ConfirmedBooking";
 
-const BookingForm = ({ availableTimes }) => {
+const BookingForm = ({ submitForm }) => {
+  const [times, setTimes] = useContext(AvalibleTimesDispatch);
+
   const occasionType = ["Birthday", "Anniversary"];
 
   const [time, setTime] = useState("");
@@ -23,6 +27,9 @@ const BookingForm = ({ availableTimes }) => {
     const newDate = event.target.value;
     console.log(newDate);
     setDate(newDate);
+
+    // send event to main
+    setTimes(newDate);
   };
 
   const onChangeGuests = (event) => {
@@ -33,7 +40,10 @@ const BookingForm = ({ availableTimes }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     console.log("handleSubmit", date, guests, occasion, time);
+    const formData = { date, guests, occasion, time };
+    submitForm(formData);
 
     // after the request is successful
     resetForm();
@@ -46,17 +56,56 @@ const BookingForm = ({ availableTimes }) => {
     setTime("");
   };
 
+  const getMinDate = () => {
+    console.log(new Date());
+    const todayDate = new Date();
+    const todayDateString = todayDate.toISOString().split("T")[0];
+    console.log(todayDateString);
+    return todayDateString;
+  };
+
+  const getMaxDate = () => {
+    console.log(new Date());
+
+    const todayDate = new Date();
+    const avalibleDays = 30;
+    todayDate.setDate(todayDate.getDate() + avalibleDays);
+
+    const maxDateString = todayDate.toISOString().split("T")[0];
+    console.log(maxDateString);
+
+    return maxDateString;
+  };
+
+  const isButtonDisabled = () => {
+    if (time !== "" && date !== "" && guests > 0 && occasion !== "") {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <form
       style={{ display: "grid", maxWidth: 200, gap: 20 }}
       onSubmit={handleSubmit}
     >
       <label htmlFor="res-date">Choose date</label>
-      <input type="date" id="res-date" value={date} onChange={onChangeDate} />
+      <input
+        type="date"
+        id="res-date"
+        value={date}
+        onChange={onChangeDate}
+        min={getMinDate()}
+        max={getMaxDate()}
+      />
 
       <label htmlFor="res-time">Choose time</label>
       <select id="res-time" value={time} onChange={onChangeTime}>
-        {availableTimes.map((item) => {
+        <option disabled value="">
+          -- select an option --
+        </option>
+        {times.map((item) => {
           return <option key={item}>{item}</option>;
         })}
       </select>
@@ -74,12 +123,21 @@ const BookingForm = ({ availableTimes }) => {
 
       <label htmlFor="occasion">Occasion</label>
       <select id="occasion" value={occasion} onChange={onChangeOccasion}>
+        <option disabled value="">
+          -- select an option --
+        </option>
         {occasionType.map((item) => {
           return <option key={item}>{item}</option>;
         })}
       </select>
 
-      <input type="submit" defaultValue="Make Your reservation" />
+      <input
+        disabled={isButtonDisabled()}
+        type="submit"
+        defaultValue="Make Your reservation"
+        data-testid="submit-button"
+      />
+      {/* <ConfirmedBooking /> */}
     </form>
   );
 };
