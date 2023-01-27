@@ -1,0 +1,14 @@
+.hero__photo {
+  width: 10%;
+  position: absolute;
+  right: 200px;
+  top: 55px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.hero__div {
+  background-color: #495e57;
+  position: relative;
+  height: 300px;
+}

@@ -1,6 +1,7 @@
 // import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import Hero from "./Hero";
+import Highlights from "./Highlights";
 import BookingPage from "./BookingPage";
 import { useReducer, createContext } from "react";
 import { fetchAPI, submitAPI } from "./api";
@@ -36,6 +37,8 @@ const Main = () => {
   return (
     <main>
       <AvalibleTimesDispatch.Provider value={[times, setTimes]}>
+        <Hero />
+        <Highlights />
         <BookingPage submitForm={submitForm} />
       </AvalibleTimesDispatch.Provider>
     </main>

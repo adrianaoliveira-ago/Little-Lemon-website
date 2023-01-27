@@ -1,0 +1,28 @@
+.Highlights__divs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 8px;
+  padding-top: 190px;
+}
+
+.Highlights__div1 {
+  background-color: #edefee;
+}
+.Highlights__div2 {
+  background-color: #edefee;
+}
+.Highlights__div3 {
+  background-color: #edefee;
+}
+
+.Highlights__photo1 {
+  width: 70%;
+}
+.Highlights__photo2 {
+  width: 70%;
+}
+.Highlights__photo3 {
+  width: 70%;
+}
