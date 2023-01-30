@@ -1,0 +1,29 @@
+.testimonial__image {
+  width: 100px;
+  margin-left: 30px;
+}
+
+.testimonial__image__star {
+  width: 130px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.testimonial__name {
+  font-size: 20px;
+  position: absolute;
+  margin-left: 140px;
+  margin-top: 65px;
+}
+
+.testimonial__div {
+  display: flex;
+  flex-direction: column;
+  background-color: #edefee;
+  position: relative;
+}
+
+.testimonial__paragraph {
+  text-align: center;
+  padding: 15px;
+}

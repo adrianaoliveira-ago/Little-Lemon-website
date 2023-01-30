@@ -5,6 +5,7 @@ import Highlights from "./Highlights";
 import BookingPage from "./BookingPage";
 import { useReducer, createContext } from "react";
 import { fetchAPI, submitAPI } from "./api";
+import Testimonials from "./Testimonials";
 
 export const AvalibleTimesDispatch = createContext(null);
 
@@ -39,6 +40,7 @@ const Main = () => {
       <AvalibleTimesDispatch.Provider value={[times, setTimes]}>
         <Hero />
         <Highlights />
+        <Testimonials />
         <BookingPage submitForm={submitForm} />
       </AvalibleTimesDispatch.Provider>
     </main>

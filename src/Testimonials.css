@@ -1,0 +1,17 @@
+.testimonials__div {
+  /* background-color: #d9d9d9; */
+
+  justify-items: start;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: 1fr; */
+  /* grid-column-gap: 50px; */
+  /* grid-row-gap: 8px; */
+  /* background-color: #edefee; */
+  /* padding-bottom: 500px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 8px;
+  margin-top: 170px;
+  padding: 150px;
+}
