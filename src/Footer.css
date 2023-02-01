@@ -3,8 +3,22 @@
   align-items: center;
 }
 .footer__logo {
-  width: 20%;
+  width: 33%;
 }
 .Footer__div {
-  background-color: #d9d9d9;
+  background-color: #495e57;
+}
+
+.footer__div__uls {
+  display: flex;
+  position: absolute;
+  margin-left: 30%;
+}
+
+.footer__ul1 {
+  margin-right: 50px;
+}
+
+.footer__ul2 {
+  margin-right: 50px;
 }

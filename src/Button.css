@@ -1,0 +1,15 @@
+.button {
+  display: flex;
+  justify-content: flex-end;
+  /* width: 940px; */
+}
+
+.button__button {
+  width: 252px;
+  height: 65px;
+  border-radius: 8px;
+  font-family: karla;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #f4ce14;
+}

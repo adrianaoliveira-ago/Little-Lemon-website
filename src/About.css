@@ -1,0 +1,61 @@
+.about__img__fish {
+  height: 438px;
+  width: 292px;
+}
+
+.about__img__cooker {
+  width: 305px;
+  height: 213px;
+}
+
+.about__img__pasta {
+  width: 305px;
+  height: 213px;
+  margin-top: 0.8%;
+}
+
+.about__imgs__div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-end;
+  margin-right: 13%;
+}
+
+.about__img__div {
+  position: absolute;
+  margin-left: 45%;
+}
+
+.about__paragraph {
+  position: absolute;
+  width: 40%;
+}
+
+.about__paragraph__description {
+  margin-top: 30%;
+  margin-left: 25%;
+  font-size: 24px;
+  font-family: inter;
+}
+
+.about__div__titles {
+  width: 40%;
+  position: absolute;
+  margin-left: 10%;
+}
+
+.about__div {
+  margin-top: 10%;
+}
+
+.about__h1__title {
+  font-size: 48px;
+  margin-bottom: 16px;
+  margin: auto;
+}
+.about__h1__subtitle {
+  font-size: 36px;
+  font-weight: normal;
+  margin: auto;
+}

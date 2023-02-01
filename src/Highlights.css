@@ -1,17 +1,3 @@
-/* .Highlights__div {
-  background-color: #edefee;
-  padding-bottom: 500px;
-  position: relative;
-} */
-/* .Highlights__div2 {
-  background-color: #edefee;
-  padding-bottom: 500px;
-}
-.Highlights__div3 {
-  background-color: #edefee;
-  padding-bottom: 500px;
-} */
-
 .Highlights__component {
   /* display: grid; */
   justify-items: start;
@@ -22,8 +8,20 @@
   /* background-color: #edefee; */
   /* padding-bottom: 500px; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 50px;
+  grid-template-columns: repeat(3, 300px);
+  grid-column-gap: 20px;
   grid-row-gap: 8px;
   position: relative;
+  justify-content: center;
+}
+
+.Highlights__title {
+  font-family: Markazi Text;
+  font-size: 60px;
+  width: 940px;
+}
+
+.Highlights__div {
+  display: flex;
+  justify-content: center;
 }

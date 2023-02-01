@@ -1,8 +1,56 @@
 .Highlight__component {
   background-color: #edefee;
   position: relative;
+  width: 300px;
 }
 
 .Highlight__image {
-  width: 314px;
+  width: 300px;
+  height: 200px;
+}
+
+.Highlight__title {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.Highlight__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Highlight__price {
+  font-size: 24px;
+  font-weight: normal;
+  color: #ce6f00;
+  margin-right: 15px;
+}
+
+.Highlight__description {
+  text-align: inherit;
+  margin-left: 15px;
+  font-size: 20px;
+  font-family: karla;
+}
+
+.Highlight__order {
+  margin-left: 15px;
+  /* margin-top: 80px; */
+  font-size: 20px;
+  position: absolute;
+  margin-top: 165px;
+}
+
+.Highlight__description__order {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.Highlight__logo__car {
+  width: 45px;
+  position: absolute;
+  margin-top: 166px;
+  margin-left: 170px;
 }

@@ -1,0 +1,12 @@
+.Bookinnform {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+  background: #fbdabb;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.bookForm {
+  width: 20%;
+}

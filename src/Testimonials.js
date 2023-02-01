@@ -11,9 +11,9 @@ import rating from "./rating.png";
 const Testimonials = () => {
   return (
     <>
-      <h1>Testimonials</h1>
-
       <div className="testimonials__div">
+        <h1 className="testimoniais__title">Testimonials</h1>
+
         <Testimonial
           rating={rating}
           image={Image1}
