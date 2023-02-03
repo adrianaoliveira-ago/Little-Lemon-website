@@ -13,6 +13,8 @@
   height: 390px;
   margin-bottom: 180px;
   margin-top: 90px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero__div__title {
@@ -43,6 +45,20 @@
 
 .hero__div__button {
   display: flex;
-  margin-left: 18%;
-  margin-top: 10%;
+}
+
+.hero__div__description {
+  width: 400px;
+}
+
+.hero__div__paragraph {
+  font-family: karla;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.hero__div__2 {
+  width: 940px;
 }

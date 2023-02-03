@@ -9,13 +9,14 @@
   /* background-color: #edefee; */
   /* padding-bottom: 500px; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 270px);
   grid-column-gap: 50px;
   grid-row-gap: 8px;
   margin-top: 170px;
   padding: 150px;
   background-color: #d9d9d9;
   position: relative;
+  justify-content: center;
 }
 
 .testimoniais__title {

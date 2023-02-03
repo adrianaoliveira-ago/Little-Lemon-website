@@ -87,6 +87,7 @@ const BookingForm = ({ submitForm }) => {
 
   return (
     <form
+      id="reservation-form"
       className="bookForm"
       style={{ display: "grid", maxWidth: 200, gap: 20 }}
       onSubmit={handleSubmit}

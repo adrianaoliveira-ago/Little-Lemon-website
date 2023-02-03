@@ -1,6 +1,6 @@
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 40px;
 }
 
@@ -9,14 +9,43 @@
   align-items: center;
   list-style: none;
   font-family: karla;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-size: 20px;
 }
 
 .nav__logo__header {
   width: 15%;
-  /* margin-top: 90px; */
+  margin-right: 5%;
 }
 
 .nav__li__links {
   padding: 10px;
+  color: black;
+}
+
+.nav__home {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__about {
+  text-decoration: none;
+  color: black;
+}
+.nav__menu {
+  text-decoration: none;
+  color: black;
+}
+.nav__reservations {
+  text-decoration: none;
+  color: black;
+}
+.nav__order {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__login {
+  text-decoration: none;
+  color: black;
 }

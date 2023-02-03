@@ -1,12 +1,14 @@
 .testimonial__image {
   width: 100px;
   margin-left: 30px;
+  margin-top: 20%;
 }
 
 .testimonial__image__star {
   width: 130px;
-  margin-bottom: 10px;
   margin-left: 30px;
+  position: absolute;
+  margin-top: 10%;
 }
 
 .testimonial__name {
@@ -21,6 +23,8 @@
   flex-direction: column;
   background-color: #edefee;
   position: relative;
+  width: 300px;
+  height: 400px;
 }
 
 .testimonial__paragraph {

@@ -4,12 +4,14 @@ import imageHighlights1 from "./ImageHighlights1.jpg";
 import imageHighlights2 from "./ImageHighlights2.jpg";
 import imageHighlights3 from "./ImageHighlights3.jpg";
 import ImageCar from "./ImageCar.png";
+import Button from "./Button";
 
 const Highlights = () => {
   return (
-    <div>
+    <div className="Highlights" id="highlights-menu">
       <div className="Highlights__div">
         <h1 className="Highlights__title">This Weeks specials!</h1>
+        <Button label={"Online Menu"} />
       </div>
       <div className="Highlights__component">
         <Highlight
