@@ -4,9 +4,20 @@
   padding: 100px;
   background: #fbdabb;
   margin-top: 10%;
-  margin-bottom: 10%;
 }
 
 .bookForm {
   width: 20%;
+}
+
+#reservation-form input,
+select {
+  font-size: 22px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+#reservation-form label {
+  font-size: 20px;
+  font-weight: bold;
 }

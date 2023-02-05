@@ -5,6 +5,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ConfirmedBooking from "./ConfirmedBooking";
+import Header from "./Header";
+
+const GenericPage = ({ text }) => {
+  return (
+    <div>
+      <Header />
+      <h1 style={{ paddingTop: "20px", textAlign: "center" }}>{text}</h1>
+    </div>
+  );
+};
 
 const router = createBrowserRouter([
   {
@@ -15,6 +25,16 @@ const router = createBrowserRouter([
   {
     path: "/confirmation",
     element: <ConfirmedBooking />,
+  },
+  {
+    path: "/order-online",
+    element: (
+      <GenericPage text={"Order Online is not available at the moment"} />
+    ),
+  },
+  {
+    path: "/login",
+    element: <GenericPage text={"Login is not available at the moment"} />,
   },
 ]);
 

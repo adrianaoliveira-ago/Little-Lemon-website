@@ -1,24 +1,25 @@
 .footer {
   display: flex;
-  align-items: center;
+  color: white;
+  font-size: 20px;
+  justify-content: center;
 }
 .footer__logo {
-  width: 33%;
+  width: 500px;
+  margin-right: 70px;
 }
 .Footer__div {
   background-color: #495e57;
 }
 
-.footer__div__uls {
-  display: flex;
-  position: absolute;
-  margin-left: 30%;
+.footer__ul {
+  list-style: none;
 }
 
-.footer__ul1 {
-  margin-right: 50px;
+.footer__ul p {
+  font-weight: bold;
 }
 
-.footer__ul2 {
-  margin-right: 50px;
+.footer__ul li {
+  padding: 3px 0px;
 }

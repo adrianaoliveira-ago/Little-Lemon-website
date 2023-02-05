@@ -10,10 +10,9 @@ import rating from "./rating.png";
 
 const Testimonials = () => {
   return (
-    <>
+    <div className="testimonials">
+      <h1 className="testimoniais__title">Testimonials</h1>
       <div className="testimonials__div">
-        <h1 className="testimoniais__title">Testimonials</h1>
-
         <Testimonial
           rating={rating}
           image={Image1}
@@ -47,7 +46,7 @@ const Testimonials = () => {
           }
         />
       </div>
-    </>
+    </div>
   );
 };
 

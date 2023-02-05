@@ -92,6 +92,7 @@ const BookingForm = ({ submitForm }) => {
       style={{ display: "grid", maxWidth: 200, gap: 20 }}
       onSubmit={handleSubmit}
     >
+      <h1>Reservation</h1>
       <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
